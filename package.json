@@ -1,0 +1,34 @@
+{
+  "name": "javet-ccxt",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "tsc:build_clean": "tsc --build --clean",
+    "tsc:build": "tsc --build",
+    "tsc:build:force": "tsc --build --force",
+    "watch": "tsc-watch --onSuccess \"npm run build\"",
+    "build": "tsc --build --clean & node esbuild.config.mjs"
+  },
+  "dependencies": {
+    "ccxt": "^4.4.34",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-plugin-polyfill-node": "^0.3.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.1",
+    "tsc-watch": "^6.2.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.16.0"
+  }
+}
